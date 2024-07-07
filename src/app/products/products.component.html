@@ -1,0 +1,13 @@
+<select name="categories" id="categories" *ngIf="categories && categories.length > 0" (change)="onCategoryChange($event)">
+  <option selected disabled="categories">Categories</option>
+  <option *ngFor="let category of categories" >{{category}}</option>
+
+</select>
+<div *ngIf="data && data.length > 0" class="container">
+    <div *ngFor="let product of data">
+      <a [routerLink]="['/product', product.id]">
+        <p>{{ product.title }}</p>
+        <img src="{{ product.image }}" width="150px" height="150px" alt="">
+      </a>
+    </div>
+  </div>

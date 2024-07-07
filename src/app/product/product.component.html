@@ -1,0 +1,8 @@
+<div *ngIf="data" class="container">
+        <p>{{ data?.title }}</p>
+        <img src="{{ data?.image }}" width="150px" height="150px" alt="">
+        <p>{{data?.description}}</p>
+        <p>Rate: {{data?.rating?.rate}}</p>
+        <p>Count: {{data?.rating?.count}}</p>
+
+  </div>
